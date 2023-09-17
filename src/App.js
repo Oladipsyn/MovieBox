@@ -1,24 +1,17 @@
-import React, { useState, useEffect } from "react";
-import { Route, Routes, useParams, useLocation } from "react-router-dom";
-import MovieDetails from "./components/MovieDetails";
-import Home from "./components/Home";
-import SearchInput from "./components/SearchInput";
+import "./App.css";
+import HomePage from "./pages/homepage";
+import MoviePage from "./pages/movies";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  const location = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
-
+  // return <MoviePage />;
   return (
-    <main className="App h-full w-full fontRoboto">
+    <Router>
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/movie/:id" element={<MovieDetails />} />
-        <Route exact path="/search" element={<SearchInput />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/Movies/:id" element={<MoviePage />} />
       </Routes>
-    </main>
+    </Router>
   );
 }
 

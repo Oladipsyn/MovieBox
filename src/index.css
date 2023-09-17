@@ -2,8 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@font-face {
+  font-family: 'Poppings Bold';
+  src: url('assets/fonts/Poppins-Bold.ttf');
+}
 
-.fontRoboto {
-   font-family: 'Roboto', sans-serif;
+@font-face {
+  font-family: 'Poppings Semibold';
+  src: url('assets/fonts/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Poppings Regular';
+  src: url('assets/fonts/Poppins-Regular.ttf');
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppings Regular',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
